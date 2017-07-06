@@ -1,8 +1,8 @@
 <?php
 
 // configure
-$from = 'Demo contact form <demo@domain.com>'; 
-$sendTo = 'Demo contact form <demo@domain.com>';
+$from = 'Demo contact form <damola.owolabi11@gmail.com>';
+$sendTo = 'Demo contact form <damola.owolabi11@gmail.com>';
 $subject = 'New message from contact form';
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
 $okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
@@ -32,9 +32,9 @@ catch (\Exception $e)
 
 if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
     $encoded = json_encode($responseArray);
-    
+
     header('Content-Type: application/json');
-    
+
     echo $encoded;
 }
 else {
